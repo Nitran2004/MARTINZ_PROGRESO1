@@ -1,0 +1,68 @@
+﻿@model MZ_PROGRESO1.Models.ZUMARRAGA
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ZUMARRAGA</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="mzCalificacionFinal" class="control-label"></label>
+                <input asp-for="mzCalificacionFinal" class="form-control" />
+                <span asp-validation-for="mzCalificacionFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzNombre" class="control-label"></label>
+                <input asp-for="mzNombre" class="form-control" />
+                <span asp-validation-for="mzNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzApellido" class="control-label"></label>
+                <input asp-for="mzApellido" class="form-control" />
+                <span asp-validation-for="mzApellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzCorreo" class="control-label"></label>
+                <input asp-for="mzCorreo" class="form-control" />
+                <span asp-validation-for="mzCorreo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzCodigoPostal" class="control-label"></label>
+                <input asp-for="mzCodigoPostal" class="form-control" />
+                <span asp-validation-for="mzCodigoPostal" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="mzEstudianteNuevo" /> @Html.DisplayNameFor(model => model.mzEstudianteNuevo)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzFechaNacimiento" class="control-label"></label>
+                <input asp-for="mzFechaNacimiento" class="form-control" />
+                <span asp-validation-for="mzFechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mzPromedioConducta" class="control-label"></label>
+                <input asp-for="mzPromedioConducta" class="form-control" />
+                <span asp-validation-for="mzPromedioConducta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

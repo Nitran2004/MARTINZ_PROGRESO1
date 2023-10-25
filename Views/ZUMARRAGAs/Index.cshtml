@@ -1,0 +1,77 @@
+﻿@model IEnumerable<MZ_PROGRESO1.Models.ZUMARRAGA>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.mzCalificacionFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzCorreo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzCodigoPostal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzEstudianteNuevo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzFechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mzPromedioConducta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzCalificacionFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzCorreo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzCodigoPostal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzEstudianteNuevo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzFechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mzPromedioConducta)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.mzCodigo">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.mzCodigo">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.mzCodigo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
